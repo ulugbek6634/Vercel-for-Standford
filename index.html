@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Standart Education — Turkiya universitetlariga o‘qishga kirish</title>
+<meta name="description" content="Turkiya universitetiga o‘qishga kirish: hujjatlar tarjimasi, qabul xati, shartnoma, talabalik guvohnomasi va talaba ikameti. Ofis Istanbulda, 4. Levent. Bepul maslahat.">
+<meta property="og:title" content="Turkiya universitetiga o‘qishga kiring">
+<meta property="og:description" content="Hujjatlarni boshidan oxirigacha tayyorlaymiz. Shartnoma o‘zbek tilida. Ofis Istanbulda.">
+<meta name="theme-color" content="#0e2747">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  // ===== SOZLAMALAR / НАСТРОЙКИ (меняются тут) =====
+  window.SITE = {
+    brand: "Standart Education",
+    whatsapp: "905529877075",            // номер WhatsApp без + и пробелов
+    phone: "+90 552 987 70 75",          // номер для кнопки «Позвонить»
+    instagram: "",                       // ссылка на Instagram (Highlights «natijalar»), пусто = блок скрыт
+    pixelId: "",                         // ID пикселя Meta, пусто = пиксель выключен
+    waText: "Assalomu alaykum! Turkiyada o‘qishga kirish bo‘yicha maslahat olmoqchiman."
+  };
+</script>
+<style>
+  :root{
+    --navy:#0e2747; --navy-2:#163a66; --ink:#14202e; --muted:#5b6b7d;
+    --bg:#f6f4ef; --card:#ffffff; --line:#e4e0d6;
+    --gold:#e2a33b; --gold-ink:#7a4f08; --green:#1faa59; --green-d:#178a48;
+    --radius:16px; --shadow:0 6px 24px rgba(14,39,71,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+  h2{font-size:clamp(24px,4.2vw,34px);font-weight:800}
+  h3{font-size:18px;font-weight:700}
+  p{margin:0 0 1em}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s;font-family:inherit}
+  .btn:active{transform:scale(.98)}
+  .btn-gold{background:var(--gold);color:#1d1404}
+  .btn-gold:hover{background:#efb24c}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-wa:hover{background:var(--green-d)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* header */
+  header.top{position:sticky;top:0;z-index:20;background:rgba(14,39,71,.96);backdrop-filter:blur(8px);color:#fff}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--gold);color:var(--navy);font-style:normal;font-size:16px}
+  .top a.call{font-weight:700;font-size:14px;text-decoration:none;opacity:.9}
+
+  /* hero */
+  .hero{background:radial-gradient(1200px 500px at 85% -10%,#24548f 0%,transparent 60%),linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:44px 0 56px}
+  .hero .grid{display:grid;gap:32px;grid-template-columns:1fr}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:18px}
+  .badge b{width:8px;height:8px;border-radius:50%;background:#4ade80;display:inline-block}
+  .hero h1{font-size:clamp(30px,6vw,50px);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero .lead{font-size:clamp(16px,2.4vw,19px);color:#d6e1ef;max-width:560px}
+  .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px;max-width:560px}
+  .chip{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:600;color:#e8eef6}
+  .chip svg{width:20px;height:20px;flex:none;color:var(--gold);margin-top:1px}
+
+  /* form card */
+  .formcard{background:var(--card);color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .formcard h3{font-size:21px;margin-bottom:4px}
+  .formcard .sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+  input,select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fbfaf7;color:var(--ink)}
+  input:focus,select:focus{outline:none;border-color:var(--navy-2);background:#fff}
+  .phone{display:flex;gap:8px}
+  .phone select{width:112px;flex:none}
+  .formcard .btn{width:100%;margin-top:18px}
+  .fine{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+  .hp{position:absolute;left:-9999px}
+  .ok{display:none;text-align:center;padding:10px 0}
+  .ok .tick{width:56px;height:56px;border-radius:50%;background:#e7f7ee;color:var(--green);display:grid;place-items:center;margin:0 auto 12px}
+  .err{color:#b42318;font-size:13px;margin-top:8px;display:none}
+
+  section{padding:56px 0}
+  .kicker{color:var(--gold-ink);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .cards{display:grid;gap:14px;grid-template-columns:1fr;margin-top:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .card .ic{width:44px;height:44px;border-radius:12px;background:#fff4e0;color:var(--gold-ink);display:grid;place-items:center;margin-bottom:12px}
+  .card .ic svg{width:24px;height:24px}
+  .card p{color:var(--muted);margin:0;font-size:15px}
+
+  /* steps */
+  .steps{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px;counter-reset:s}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:grid;place-items:center}
+  .steps h3{margin:2px 0 4px;font-size:16px}
+  .steps p{margin:0;color:var(--muted);font-size:14px}
+
+  /* compare */
+  .compare{background:var(--navy);color:#fff;border-radius:22px;padding:28px 20px;margin-top:8px}
+  .compare h2{color:#fff}
+  .compare .intro{color:#c9d6e6}
+  .qs{display:grid;gap:10px;margin-top:18px}
+  .q{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px}
+  .q svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:1px}
+  .q b{display:block}
+  .q span{color:#c9d6e6;font-size:14px}
+
+  /* docs */
+  .docs{display:grid;gap:10px;margin-top:20px}
+  .doc{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-weight:600}
+  .doc svg{width:22px;height:22px;color:var(--green);flex:none}
+
+  /* reviews */
+  .reviews{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 20px;text-align:center}
+  .reviews p{color:var(--muted);max-width:520px;margin:0 auto 18px}
+  .btn-ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888);color:#fff}
+
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 16px;margin-top:10px}
+  summary{cursor:pointer;list-style:none;padding:16px 28px 16px 0;font-weight:700;position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:0;top:12px;font-size:22px;color:var(--gold-ink)}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin:0 0 16px}
+
+  /* office */
+  .office{display:grid;gap:16px;grid-template-columns:1fr;align-items:stretch}
+  .map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:260px;background:#e9e6de}
+  .map iframe{width:100%;height:100%;min-height:260px;border:0;display:block}
+
+  .final{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+  .final .grid{display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
+  .final p{color:#d6e1ef}
+
+  footer{background:#0a1d35;color:#9fb1c7;font-size:13px;padding:28px 0 96px}
+  footer a{color:#cfdbea}
+
+  /* sticky mobile bar */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
+  .mbar .btn{padding:13px 10px;font-size:15px}
+
+  @media (min-width:760px){
+    .hero{padding:64px 0 80px}
+    .hero .grid{grid-template-columns:1.15fr .85fr;align-items:center}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .qs{grid-template-columns:repeat(2,1fr)}
+    .docs{grid-template-columns:repeat(3,1fr)}
+    .compare{padding:40px}
+    .office{grid-template-columns:1fr 1fr}
+    .final .grid{grid-template-columns:1fr 1fr}
+    .mbar{display:none}
+    footer{padding-bottom:28px}
+  }
+  @media (min-width:1000px){ .cards{grid-template-columns:repeat(4,1fr)} .steps{grid-template-columns:repeat(3,1fr)} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .4-.06.62.47.24.55.8 1.92.87 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M16 9h2a2 2 0 0 1 2 2v10M2 21h20M8 7h4M8 11h4M8 15h4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM9 16h6.5a3.5 3.5 0 0 0 0-7H9"/></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#" class="logo"><i>S</i><span data-brand>Standart Education</span></a>
+    <a class="call" data-tel href="#">📞 <span data-phone></span></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:44px">
+  <div class="wrap grid">
+    <div>
+      <div class="badge"><b></b> Ofis Istanbulda · 4. Levent</div>
+      <h1>Turkiya universitetiga o‘qishga kiring. <em>Hujjatlarni boshidan oxirigacha</em> biz tayyorlaymiz</h1>
+      <p class="lead">Universitet tanlash, tarjima, qabul xati, shartnoma, talabalik guvohnomasi va talaba ikameti uchun hujjat topshirish. Shartnomani o‘zbek tilida o‘qib, tushunib imzolaysiz.</p>
+      <div class="ctas">
+        <a href="#forma" class="btn btn-gold">Bepul maslahat olish</a>
+        <a href="#" data-wa class="btn btn-wa"><svg><use href="#i-wa"/></svg>WhatsApp’ga yozish</a>
+      </div>
+      <div class="chips">
+        <div class="chip"><svg><use href="#i-check"/></svg>Rasmiy ro‘yxatdan o‘tgan kompaniya</div>
+        <div class="chip"><svg><use href="#i-check"/></svg>Shartnoma tarjimasi o‘zbek tilida</div>
+        <div class="chip"><svg><use href="#i-check"/></svg>Oldindan xizmat haqi olinmaydi</div>
+        <div class="chip"><svg><use href="#i-check"/></svg>1 yillik rasmiy shartnoma</div>
+      </div>
+    </div>
+
+    <div class="formcard" id="forma">
+      <form class="leadform" novalidate>
+        <h3>Bepul maslahatga yoziling</h3>
+        <div class="sub">Menejerimiz tez orada bog‘lanadi va sizga mos variantni tushuntiradi.</div>
+        <label>Ismingiz</label>
+        <input name="name" autocomplete="given-name" placeholder="Masalan: Aziz" required>
+        <label>Telefon raqamingiz (WhatsApp)</label>
+        <div class="phone">
+          <select name="cc" aria-label="Davlat kodi">
+            <option value="+90">🇹🇷 +90</option>
+            <option value="+998">🇺🇿 +998</option>
+            <option value="+7">🇷🇺 +7</option>
+          </select>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="5xx xxx xx xx" required>
+        </div>
+        <label>Viza yoki ikamet muddatingiz</label>
+        <select name="status">
+          <option value="">Tanlang</option>
+          <option>1 oydan ko‘proq vaqt bor</option>
+          <option>1 oydan kam vaqt qoldi</option>
+          <option>Muddati tugagan</option>
+          <option>Hali Turkiyaga kelmadim</option>
+          <option>Bilmayman</option>
+        </select>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-gold" type="submit">Maslahat olish</button>
+        <div class="err">Iltimos, ism va telefon raqamini to‘g‘ri kiriting.</div>
+        <div class="fine">Ma’lumotlaringiz faqat siz bilan bog‘lanish uchun ishlatiladi.</div>
+      </form>
+      <div class="ok">
+        <div class="tick"><svg width="28" height="28"><use href="#i-check"/></svg></div>
+        <h3>Rahmat! Arizangiz qabul qilindi</h3>
+        <p style="color:var(--muted)">Menejerimiz tez orada qo‘ng‘iroq qiladi. Kutishni xohlamasangiz, hoziroq WhatsApp’ga yozing.</p>
+        <a href="#" data-wa class="btn btn-wa" style="width:100%"><svg><use href="#i-wa"/></svg>WhatsApp’ga yozish</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Nega bizga ishonishadi</div>
+    <h2>Siz bilan ochiq va rasmiy ishlaymiz</h2>
+    <div class="cards">
+      <div class="card"><div class="ic"><svg><use href="#i-building"/></svg></div><h3>Haqiqiy ofis</h3><p>Istanbul, 4. Levent, Sapphire biznes markazi. Ofisga kelib, jamoamiz bilan yuzma-yuz gaplashasiz.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-doc"/></svg></div><h3>Shartnoma o‘zbek tilida</h3><p>Universitet shartnomasining tarjimasini o‘qib chiqasiz va faqat tushunganingizdan keyin imzolaysiz.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Oldindan to‘lov yo‘q</h3><p>Xizmat haqini oldindan so‘ramaymiz. Barcha to‘lovlar shartnomada yozilgan, yashirin to‘lov yo‘q.</p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-route"/></svg></div><h3>Oxirigacha hamrohlik</h3><p>Qabul xatidan to Göç İdaresi’ga hujjat topshirishgacha har bir bosqichda yoningizdamiz.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Qanday ishlaymiz</div>
+    <h2>6 bosqichda o‘qishga kirasiz</h2>
+    <ol class="steps">
+      <li><div><h3>Bepul maslahat</h3><p>Vaziyatingizni so‘raymiz, mos universitet va yo‘nalishni tanlaymiz.</p></div></li>
+      <li><div><h3>Hujjatlar tarjimasi</h3><p>Pasport va attestat (diplom) tarjimasi hamda notarial tasdig‘i.</p></div></li>
+      <li><div><h3>Qabul xati va shartnoma</h3><p>Universitetdan qabul xati (offer letter) olamiz, shartnomani tarjimasi bilan imzolaysiz.</p></div></li>
+      <li><div><h3>Talabalik guvohnomasi</h3><p>Universitetdan öğrenci belgesi va talaba kartasini olamiz.</p></div></li>
+      <li><div><h3>Sug‘urta, soliq raqami, manzil</h3><p>Talaba ikameti uchun kerak bo‘ladigan barcha hujjatlarni birga tayyorlaymiz.</p></div></li>
+      <li><div><h3>Göç İdaresi</h3><p>Talaba ikameti uchun ariza topshirishda va uchrashuvga borishda yordam beramiz.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="compare">
+      <div class="kicker" style="color:var(--gold)">Narxni solishtirishdan oldin</div>
+      <h2>Arzon e’longa shoshilmang. Avval 4 ta savol bering</h2>
+      <p class="intro">Ko‘p e’lonlarda past narx yoziladi, lekin bu ko‘pincha bir yil emas, faqat 6 oy (bir semestr) uchun bo‘ladi. Har qanday kompaniyaga shu savollarni bering:</p>
+      <div class="qs">
+        <div class="q"><svg><use href="#i-q"/></svg><div><b>Shartnoma necha oyga?</b><span>Bizda universitet bilan 1 yillik shartnoma tuziladi.</span></div></div>
+        <div class="q"><svg><use href="#i-q"/></svg><div><b>Pul kimga to‘lanadi?</b><span>Universitet to‘lovi to‘g‘ridan-to‘g‘ri universitetga o‘tkaziladi.</span></div></div>
+        <div class="q"><svg><use href="#i-q"/></svg><div><b>Oldindan pul so‘rashadimi?</b><span>Biz xizmat haqini oldindan olmaymiz.</span></div></div>
+        <div class="q"><svg><use href="#i-q"/></svg><div><b>Ofisi bormi?</b><span>Bizning ofis: 4. Levent, Sapphire. Istalgan kuni kelishingiz mumkin.</span></div></div>
+      </div>
+      <div style="margin-top:22px"><a href="#forma" class="btn btn-gold">Aniq narxni bilish</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Kim uchun</div>
+    <h2>Boshlash uchun nima kerak</h2>
+    <div class="docs">
+      <div class="doc"><svg><use href="#i-check"/></svg>Yoshingiz 18 dan 55 gacha</div>
+      <div class="doc"><svg><use href="#i-check"/></svg>Xorijiy pasport</div>
+      <div class="doc"><svg><use href="#i-check"/></svg>Maktab attestati yoki diplom</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section style="padding-top:0" id="reviews">
+  <div class="wrap">
+    <div class="reviews">
+      <div class="kicker">Natijalar</div>
+      <h2>Mijozlarimiz o‘zlari aytib berishadi</h2>
+      <p>Hujjatlarini biz orqali olgan talabalarning video-fikrlari Instagram sahifamizdagi “natijalar” bo‘limida.</p>
+      <a href="#" data-ig target="_blank" rel="noopener" class="btn btn-ig">Videolarni ko‘rish</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Savollar</div>
+    <h2>Ko‘p beriladigan savollar</h2>
+    <details><summary>Maslahat pullikmi?</summary><p>Yo‘q, maslahat bepul. Telefon, WhatsApp yoki ofisda gaplashishimiz mumkin.</p></details>
+    <details><summary>Viza muddatim tugashiga oz qoldi. Ulguramanmi?</summary><p>Hujjatlarni viza muddati tugamasdan oldin topshirish juda muhim. Shuning uchun iloji boricha tezroq yozing, menejer sizning sanangizga qarab aniq reja tuzib beradi.</p></details>
+    <details><summary>Shartnomani oldindan ko‘rsam bo‘ladimi?</summary><p>Ha. Ofisimizda shartnoma va uning o‘zbekcha tarjimasini ko‘rsatamiz. Tushunmagan joyingizni so‘rab, keyin qaror qilasiz.</p></details>
+    <details><summary>Ofisingiz qayerda?</summary><p>Istanbul, 4. Levent metro bekati yonida, Sapphire biznes markazi. Yenikapı–Hacıosman (M2) liniyasida, Yenikapı’dan taxminan 20 daqiqa.</p></details>
+    <details><summary>Necha yoshgacha qabul qilinadi?</summary><p>18 yoshdan 55 yoshgacha.</p></details>
+  </div>
+</section>
+
+<!-- OFFICE + FINAL FORM -->
+<section class="final">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker" style="color:var(--gold)">Bugun boshlang</div>
+      <h2 style="color:#fff">Vaziyatingizni 5 daqiqada tushuntirib beramiz</h2>
+      <p>Raqamingizni qoldiring yoki WhatsApp’ga yozing. Menejer sizga mos universitet, muddatlar va aniq narxni aytadi.</p>
+      <div class="map" style="margin-top:18px">
+        <iframe loading="lazy" title="Ofis xaritada" src="https://www.google.com/maps?q=Sapphire+4.+Levent+Istanbul&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="formcard">
+      <form class="leadform" novalidate>
+        <h3>Bepul maslahat</h3>
+        <div class="sub">Ism va telefon kifoya.</div>
+        <label>Ismingiz</label>
+        <input name="name" autocomplete="given-name" placeholder="Masalan: Aziz" required>
+        <label>Telefon raqamingiz (WhatsApp)</label>
+        <div class="phone">
+          <select name="cc" aria-label="Davlat kodi">
+            <option value="+90">🇹🇷 +90</option>
+            <option value="+998">🇺🇿 +998</option>
+            <option value="+7">🇷🇺 +7</option>
+          </select>
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="5xx xxx xx xx" required>
+        </div>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-gold" type="submit">Maslahat olish</button>
+        <div class="err">Iltimos, ism va telefon raqamini to‘g‘ri kiriting.</div>
+      </form>
+      <div class="ok">
+        <div class="tick"><svg width="28" height="28"><use href="#i-check"/></svg></div>
+        <h3>Rahmat! Arizangiz qabul qilindi</h3>
+        <p style="color:var(--muted)">Menejerimiz tez orada qo‘ng‘iroq qiladi.</p>
+        <a href="#" data-wa class="btn btn-wa" style="width:100%"><svg><use href="#i-wa"/></svg>WhatsApp’ga yozish</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b data-brand style="color:#fff">Standart Education</b> · Istanbul, 4. Levent, Sapphire</div>
+    <div style="margin-top:6px">Tel: <a data-tel href="#"><span data-phone></span></a></div>
+    <div style="margin-top:10px;opacity:.7">Universitetga qabul va to‘lov shartlari universitet tomonidan belgilanadi. Yakuniy shartlar shartnomada ko‘rsatiladi.</div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="#" data-tel class="btn" style="background:var(--navy);color:#fff"><svg><use href="#i-phone"/></svg>Qo‘ng‘iroq</a>
+  <a href="#" data-wa class="btn btn-wa"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var S = window.SITE;
+  var qs = new URLSearchParams(location.search);
+  var utm = {};
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"].forEach(function(k){ if(qs.get(k)) utm[k]=qs.get(k); });
+
+  document.querySelectorAll("[data-brand]").forEach(function(e){ e.textContent = S.brand; });
+  document.querySelectorAll("[data-phone]").forEach(function(e){ e.textContent = S.phone; });
+  document.querySelectorAll("[data-tel]").forEach(function(e){ e.href = "tel:" + S.phone.replace(/\s/g,""); });
+  var waHref = "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent(S.waText);
+  document.querySelectorAll("[data-wa]").forEach(function(e){
+    e.href = waHref; e.target = "_blank"; e.rel = "noopener";
+    e.addEventListener("click", function(){ track("Contact", {method:"whatsapp"}); });
+  });
+  if (S.instagram) document.querySelectorAll("[data-ig]").forEach(function(e){ e.href = S.instagram; });
+  else { var r = document.getElementById("reviews"); if (r) r.style.display = "none"; }
+
+  // Meta Pixel
+  if (S.pixelId) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', S.pixelId); fbq('track', 'PageView');
+  }
+  function track(ev, data, id){ if (window.fbq) fbq('track', ev, data || {}, id ? {eventID:id} : undefined); }
+
+  document.querySelectorAll(".leadform").forEach(function(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var err = form.querySelector(".err");
+      var f = form.elements;
+      var name = f.name.value.trim();
+      var digits = f.phone.value.replace(/\D/g,"");
+      if (name.length < 2 || digits.length < 7) { err.style.display = "block"; return; }
+      err.style.display = "none";
+      var btn = form.querySelector("button"); btn.disabled = true; btn.textContent = "Yuborilmoqda...";
+      var eventId = "lead-" + Date.now() + "-" + Math.random().toString(36).slice(2,8);
+      var payload = {
+        name: name,
+        phone: f.cc.value + digits,
+        status: f.status ? f.status.value : "",
+        website: f.website.value,
+        page: location.href, utm: utm, eventId: eventId
+      };
+      fetch("/api/lead", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload)})
+        .then(function(r){ if(!r.ok) throw new Error(r.status); })
+        .then(function(){
+          track("Lead", {}, eventId);
+          form.style.display = "none";
+          form.parentNode.querySelector(".ok").style.display = "block";
+        })
+        .catch(function(){
+          btn.disabled = false; btn.textContent = "Maslahat olish";
+          err.textContent = "Xatolik yuz berdi. Iltimos, WhatsApp orqali yozing yoki qayta urinib ko‘ring.";
+          err.style.display = "block";
+        });
+    });
+  });
+})();
+</script>
+</body>
+</html>
