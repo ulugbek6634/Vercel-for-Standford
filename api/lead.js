@@ -7,8 +7,19 @@ const clean = (v, max = 200) => String(v || "").replace(/[<>]/g, "").trim().slic
 
 async function sendTelegram(lead) {
   const token = env("TELEGRAM_BOT_TOKEN");
-  const chats = env("TELEGRAM_CHAT_ID").split(",").map((s) => s.trim()).filter(Boolean);
-  if (!token || !chats.length) return "skip";
+  if (!token) return "skip";
+  let chats = env("TELEGRAM_CHAT_ID").split(",").map((s) => s.trim()).filter(Boolean);
+  if (!chats.length) {
+    // Чат не указан: шлём во все чаты, где боту недавно писали (например, /start в группе менеджеров).
+    const u = await fetch(`https://api.telegram.org/bot${token}/getUpdates`).then((r) => r.json());
+    const ids = new Set();
+    for (const x of u.result || []) {
+      const m = x.message || x.my_chat_member || x.channel_post;
+      if (m && m.chat) ids.add(String(m.chat.id));
+    }
+    chats = [...ids];
+    if (!chats.length) throw new Error("telegram: no chats, write /start to the bot");
+  }
   const utm = Object.entries(lead.utm).map(([k, v]) => `${k}: ${v}`).join("\n");
   const text = [
     "🆕 Новая заявка с сайта",
