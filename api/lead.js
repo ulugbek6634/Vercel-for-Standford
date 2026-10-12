@@ -5,6 +5,23 @@ const crypto = require("crypto");
 const env = (k) => (process.env[k] || "").trim();
 const clean = (v, max = 200) => String(v || "").replace(/[<>]/g, "").trim().slice(0, max);
 
+async function sendWebhook(lead) {
+  // Google Apps Script (ветка отчёта): сам шлёт в Telegram и создаёт сделку в amoCRM.
+  const url = env("LEAD_WEBHOOK_URL");
+  if (!url) return "skip";
+  const r = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify({ name: lead.name, phone: lead.phone, status: lead.status, page: lead.page, utm: lead.utm, website: "" }),
+    redirect: "follow",
+  });
+  const text = await r.text();
+  let j = {};
+  try { j = JSON.parse(text); } catch { throw new Error("webhook bad response " + r.status + " " + text.slice(0, 200)); }
+  if (!j.ok) throw new Error("webhook " + JSON.stringify(j).slice(0, 200));
+  return "ok";
+}
+
 async function sendTelegram(lead) {
   const token = env("TELEGRAM_BOT_TOKEN");
   if (!token) return "skip";
@@ -119,13 +136,13 @@ module.exports = async (req, res) => {
   }
   const lead = { name, phone, status: clean(b.status, 60), utm, page: clean(b.page, 300), eventId: clean(b.eventId, 60) };
 
-  const results = await Promise.allSettled([sendTelegram(lead), sendAmo(lead), sendCapi(lead, req)]);
-  const [tg, amo, capi] = results.map((r) => (r.status === "fulfilled" ? r.value : "error: " + r.reason.message));
-  console.log("lead", { phone: lead.phone, tg, amo, capi });
+  const results = await Promise.allSettled([sendWebhook(lead), sendTelegram(lead), sendAmo(lead), sendCapi(lead, req)]);
+  const [hook, tg, amo, capi] = results.map((r) => (r.status === "fulfilled" ? r.value : "error: " + r.reason.message));
+  console.log("lead", { phone: lead.phone, hook, tg, amo, capi });
 
   // Заявка считается принятой, если дошла хотя бы до одного канала (или каналы ещё не настроены).
-  const delivered = [tg, amo].some((x) => x === "ok");
-  const configured = [tg, amo].some((x) => x !== "skip");
+  const delivered = [hook, tg, amo].some((x) => x === "ok");
+  const configured = [hook, tg, amo].some((x) => x !== "skip");
   if (configured && !delivered) return res.status(502).json({ ok: false });
   return res.status(200).json({ ok: true });
 };

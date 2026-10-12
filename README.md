@@ -20,6 +20,7 @@
 | `AMO_SUBDOMAIN` | `standarteducation` |
 | `AMO_TOKEN` | долгосрочный токен: amoCRM → amoМаркет → Создать интеграцию (внешняя) → Ключи и доступы |
 | `AMO_PIPELINE_ID`, `AMO_STATUS_ID` | необязательно: в какую воронку/этап класть сделку |
+| `LEAD_WEBHOOK_URL` | адрес Google Apps Script (/exec): шлёт заявку в Telegram и amoCRM, ключи хранятся в скрипте |
 | `META_PIXEL_ID`, `META_CAPI_TOKEN` | необязательно: серверное событие Lead для оптимизации рекламы |
 
 Без переменных форма работает, но заявки никуда не уходят (только лог Vercel).
